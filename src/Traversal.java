@@ -98,6 +98,11 @@ public class Traversal {
       //punts us back up to top of while loop and the next
       //value in stack is pushed onto current, losing its null
       //and continues down the line.
+      //if TreeNode<T> node has no children
+      //after printing value of node, both children
+      //are null, so this will loop from here twice then nodeStack
+      //will be empty (no children of a null node!)
+      //and we're done
       if(current == null) {
         continue; 
       } 
